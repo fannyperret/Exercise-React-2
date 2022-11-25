@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démo</title>
+</head>
+<body>
+
+    <div id="react-goes-here">Hello World!</div>
+
+
+    <!-- Load React -->
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react@16/umd/react.production.min.js">
+    </script>
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js">
+    </script>
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        console.log(React); // You can see here React library!
+
+        /* 
+            functional components (composants fonction)
+            on peut aussi utiliser des fonctions fléchées:
+            const MyFirstComponent = () => 
+                <div>Hello Openclassrooms! 👋</div>
+        */
+        function MyFirstComponent() {
+            return (
+                <div>Hello Openclassrooms! 👋</div>
+            )
+        }
+
+        /* 
+            on attache React à notre HTML
+            on demande à ReactDOM de générer (render) notre composant React qui s'apelle MyFirstComponent
+        */
+        ReactDOM.render(
+            <MyFirstComponent />,
+            document.getElementById("react-goes-here")
+        )
+
+    </script>
+    
+</body>
+</html>
